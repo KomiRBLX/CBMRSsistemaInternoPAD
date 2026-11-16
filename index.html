@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corregedoria CBMRS — Controle Interno</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section id="login" hidden>
+  <form id="formLogin" class="card login">
+    <!-- Coloque seu brasão em assets/images/brasao.png -->
+    <img src="assets/images/brasao.png" alt="Identificação institucional" onerror="this.style.display='none'">
+    <h1>Corregedoria do CBMRS</h1>
+    <p class="muted">Controle Interno</p>
+    <label>Usuário <input name="usuario" autocomplete="username" required></label>
+    <label>Senha <input name="senha" type="password" autocomplete="current-password" required></label>
+    <p id="erroLogin" class="erro"></p>
+    <button class="btn">Entrar</button>
+  </form>
+</section>
+
+<section id="app" hidden>
+  <aside>
+    <div class="marca"><img src="assets/images/brasao.png" alt="" onerror="this.style.display='none'"><span>CORREGEDORIA<br>CBMRS</span></div>
+    <nav id="nav"></nav>
+  </aside>
+  <div class="main">
+    <header>
+      <span class="inst">Controle Interno da Corregedoria</span>
+      <span class="usr"><b id="usrNome"></b> <small id="usrPosto"></small> <button class="btn sec" id="btnSair">Sair</button></span>
+    </header>
+    <main id="view"></main>
+  </div>
+</section>
+<div id="toast"></div>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/procedimento.js"></script>
+<script src="js/gestao.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
